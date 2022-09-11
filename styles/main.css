@@ -10,6 +10,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--color-bg);
   padding: 4rem;
+}
+body * {
   box-sizing: border-box;
 }
 
@@ -30,7 +32,7 @@ body {
 
 .card > div {
   position: relative;
-  transition: all 0.25s cubic-bezier(0.45,0.05,0.55,0.95);
+  transition: all 0.55s cubic-bezier(0,.36,.39,1);
   overflow: hidden;
   border-radius: var(--minor-radius);
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
@@ -43,9 +45,20 @@ body {
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,0), 35%, rgba(255,255,255,0.55));
   position: absolute;
-  transition: all 0.25s cubic-bezier(0.45,0.05,0.55,0.95);
+  transition: all 0.55s cubic-bezier(0,.36,.39,1);
   left: -30px;
   top: -60px;
+}
+.card > div:after {
+  transition: all 0.55s cubic-bezier(0,.36,.39,1);
+  content: "";
+  width: 178px;
+  height: 99%;
+  position: absolute;
+  border: 1px solid rgba(255,255,255,0.15);
+  top: 0;
+  left: 0;
+  border-radius: 6px;
 }
 .card > div img {
   width: var(--card-width);
@@ -62,9 +75,12 @@ body {
 
 .card > div:hover {
   scale: 108%;
-  transform: perspective(500px) rotateX(8deg) translateY(-2%);
+  transform: perspective(400px) rotateX(9deg) translateY(-3%);
 }
 
 .card > div:hover:before {
   height: 300px;
+}
+.card > div:hover:after {
+  border-top: 1px solid rgba(255,255,255,0.6);
 }
