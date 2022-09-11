@@ -30,6 +30,10 @@ body * {
   margin: 0;
 }
 
+.card:hover figcaption {
+  color: white;
+}
+
 .card > div {
   position: relative;
   transition: all 0.55s cubic-bezier(0,.36,.39,1);
@@ -71,6 +75,7 @@ body * {
   font-size: .8rem;
   color: var(--color-card-caption);
   padding: 1rem 0;
+  transition: all 0.55s cubic-bezier(0,.36,.39,1);
 }
 
 .card > div:hover {
