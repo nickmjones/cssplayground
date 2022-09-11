@@ -39,7 +39,7 @@ body * {
   transition: all 0.55s cubic-bezier(0,.36,.39,1);
   overflow: hidden;
   border-radius: var(--minor-radius);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 24px -8px rgba(0,0,0,1);
 }
 .card > div:before {
   content: "";
@@ -81,6 +81,7 @@ body * {
 .card > div:hover {
   scale: 108%;
   transform: perspective(400px) rotateX(9deg) translateY(-3%);
+  box-shadow: 0 14px 32px -8px rgba(0,0,0,1);
 }
 
 .card > div:hover:before {
